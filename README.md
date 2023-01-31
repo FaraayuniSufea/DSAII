@@ -6,11 +6,11 @@ Djikstra applied this characteristic the other way around, for example, we overs
 The Basic Algorithm for Dijkstra:-
 
 	function dijkstra(G, S)
-    	for each vertex V in G
-        distance[V] <- infinite
-        previous[V] <- NULL
-        If V != S, add V to Priority Queue Q
-   	distance[S] <- 0
+    		for each vertex V in G
+        	distance[V] <- infinite
+       	 	previous[V] <- NULL
+        	If V != S, add V to Priority Queue Q
+   		distance[S] <- 0
 	
     	while Q IS NOT EMPTY
         U <- Extract MIN from Q
@@ -51,11 +51,11 @@ Dijkstra's algorithm are modified because to determine the maximum load rather t
 Modified Dijkstra's Algorithm:-
 
 	function dijkstra(G, S)
-    	for each vertex V in G
-        distance[V] <- infinite
-        previous[V] <- NULL
-        If V != S, add V to Priority Queue Q
-    	distance[S] <- 0
+    		for each vertex V in G
+        	distance[V] <- infinite
+        	previous[V] <- NULL
+        	If V != S, add V to Priority Queue Q
+    		distance[S] <- 0
 	
    	while Q IS NOT EMPTY
         U <- Extract MAX from Q

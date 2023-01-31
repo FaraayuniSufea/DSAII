@@ -58,10 +58,10 @@ Modified Dijkstra's Algorithm:-
     			distance[S] <- 0
 	
    	while Q IS NOT EMPTY
-       		U <- Extract MAX from Q
+       	U <- Extract MAX from Q
         	for each unvisited neighbour V of U
             	tempDistance <- distance[U] + edge_weight(U, V)
-            	if tempDistance < distance[V]
+        if tempDistance < distance[V]
                 	distance[V] <- tempDistance
                 	previous[V] <- U
    	return distance[], previous[]

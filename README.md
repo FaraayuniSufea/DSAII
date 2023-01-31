@@ -19,6 +19,22 @@ function dijkstra(G, S)
                 distance[V] <- tempDistance
                 previous[V] <- U
     return distance[], previous[]
+  ** or**
+    Input: a graph G, a source vertex s and a destination vertex t
+	Output: a path from s to t with the minimum weight 
+	1. for 	each vertex v do
+		{ status[v]=0; wt[v]=-1; dad[v]=-1; } 
+	2. status[s]=2; wt[s]=+∞;
+	3. for each edge [s, w] do
+		{ status[w]=1; wt[w]=weight(s,w); dad[w]=s; }
+	4. while there are fringes do
+		v = the fringe with the min wt-value; status[v]=2;
+		for each edge[v, w] do
+			case 1. status[w]==0:
+			{ status[w]=1; wt[w]=wt[v]+weight(v, w);
+			dad[w]=v; }
+			case 2. (status[w]==1) and (wt[w]>(wt[v]+weight(v,w)): { wt[w]= wt[v]+weight(v, w);
+			dad[w]=v; }
     
 Performance of Dijkstra algorithm
 The Dijkstra algorithm takes O((n+m)logn) time where n is the number of nodes in graph G and m is the number of edges in graph G
@@ -47,6 +63,21 @@ function dijkstra(G, S)
                 distance[V] <- tempDistance
                 previous[V] <- U
     return distance[], previous[]
+   ** or**
+    Input: a graph G, a source vertex s and a destination vertex t
+	Output: a path from s to t with the maximum load 
+	1. for each vertex v do
+	{ status[v]=0; wt[v]=-1; dad[v]=-1; } 
+	2. status[s]=2; wt[s]=+∞;
+	3. for each edge [s, w] do
+	{ status[w]=1; wt[w]=weight(s,w); dad[w]=s; } 
+	4. while there are fringes do
+	v = the fringe with the max wt-value; status[v]=2;
+	for each edge[v, w] do
+	case 1. status[w]==0:
+	{ status[w]=1; wt[w]=min{wt[v], weight(v,w)}; dad[w]=v; }
+	case 2. (status[w]==1) and (wt[w]<min{wt[v],weight(v, w)}): { wt[w]=min{wt[v], weight(v, w)};
+	dad[w]=v; }
 
 Performance of the modified dijkstra
 The modified dijkstra takes O((n+m)logn) time where n is the number of nodes in graph G and m is the number of edges in graph G

@@ -19,7 +19,7 @@ The Basic Algorithm for Dijkstra:-
             if tempDistance < distance[V]
                 distance[V] <- tempDistance
                 previous[V] <- U
-    return distance[], previous[]
+    	return distance[], previous[]
 
     Input: a graph G, a source vertex s and a destination vertex t
 	Output: a path from s to t with the minimum weight 
@@ -48,7 +48,7 @@ Can not work when dealing with negative weight
 
 Dijkstra's algorithm are modified because to determine the maximum load rather than the shortest path. Based on Dijkstra’s Algorithm, the starting location, s and the destination, t can be found in O((n+m)logn) time. However, since determining the greatest load path is not the same as determining the shortest path, Dijkstra's algorithm needs to be adjusted. The issue of determining the maximum load path can then be successfully solved. The weight in Dijkstra's algorithm represents factors like time, cost, and distance. The weight in the modified Dijkstra's algorithm only represents the load capacity when it is constrained by a road.
 
-Modified Dijkstra's Algorithm
+Modified Dijkstra's Algorithm:-
 
 	function dijkstra(G, S)
     	for each vertex V in G

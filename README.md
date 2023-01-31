@@ -5,12 +5,13 @@ Djikstra applied this characteristic the other way around, for example, we overs
 
 The Basic Algorithm for Dijkstra:-
 
-function dijkstra(G, S)
+	function dijkstra(G, S)
     	for each vertex V in G
         distance[V] <- infinite
         previous[V] <- NULL
         If V != S, add V to Priority Queue Q
-   	distance[S] <- 0	
+   	distance[S] <- 0
+	
     	while Q IS NOT EMPTY
         U <- Extract MIN from Q
         for each unvisited neighbour V of U
@@ -49,21 +50,21 @@ Dijkstra's algorithm are modified because to determine the maximum load rather t
 
 Modified Dijkstra's Algorithm
 
-function dijkstra(G, S)
-    for each vertex V in G
+	function dijkstra(G, S)
+    	for each vertex V in G
         distance[V] <- infinite
         previous[V] <- NULL
         If V != S, add V to Priority Queue Q
-    distance[S] <- 0
+    	distance[S] <- 0
 	
-    while Q IS NOT EMPTY
+   	while Q IS NOT EMPTY
         U <- Extract MAX from Q
         for each unvisited neighbour V of U
             tempDistance <- distance[U] + edge_weight(U, V)
             if tempDistance < distance[V]
                 distance[V] <- tempDistance
                 previous[V] <- U
-    return distance[], previous[]
+   	return distance[], previous[]
 
     Input: a graph G, a source vertex s and a destination vertex t
 	Output: a path from s to t with the maximum load 

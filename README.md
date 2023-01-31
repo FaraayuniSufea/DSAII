@@ -4,6 +4,7 @@ A Modified Dijkstra's Algorithm for Solving the Problem of Finding the Maximum L
 Djikstra applied this characteristic the other way around, for example, we overstate the distances between each vertex and the origin. After that, we go to each node and its neighbours to determine the shortest subpath there. In order to identify the next best answer, the algorithm takes a greedy approach with the expectation that the final result will be the best solution for the entire problem.
 
 The Basic Algorithm for Dijkstra:-
+
 function dijkstra(G, S)
     for each vertex V in G
         distance[V] <- infinite
@@ -48,6 +49,7 @@ Can not work when dealing with negative weight
 Dijkstra's algorithm are modified because to determine the maximum load rather than the shortest path. Based on Dijkstra’s Algorithm, the starting location, s and the destination, t can be found in O((n+m)logn) time. However, since determining the greatest load path is not the same as determining the shortest path, Dijkstra's algorithm needs to be adjusted. The issue of determining the maximum load path can then be successfully solved. The weight in Dijkstra's algorithm represents factors like time, cost, and distance. The weight in the modified Dijkstra's algorithm only represents the load capacity when it is constrained by a road.
 
 Modified Dijkstra's Algorithm
+
 function dijkstra(G, S)
     for each vertex V in G
         distance[V] <- infinite

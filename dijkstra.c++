@@ -1,5 +1,5 @@
 
-// C++ program for Dijkstra's single source shortest path algorithm. 
+// C++ program for A Modified Dijkstra's Algorithm for solving the problem of finding the maximum load path  single source shortest path algorithm. 
 //The program is for adjacency matrix representation of the graph
 
 #include <iostream>

@@ -6,13 +6,12 @@ Djikstra applied this characteristic the other way around, for example, we overs
 The Basic Algorithm for Dijkstra:-
 
 function dijkstra(G, S)
-    for each vertex V in G
+    	for each vertex V in G
         distance[V] <- infinite
         previous[V] <- NULL
         If V != S, add V to Priority Queue Q
-    distance[S] <- 0
-	
-    while Q IS NOT EMPTY
+   	distance[S] <- 0	
+    	while Q IS NOT EMPTY
         U <- Extract MIN from Q
         for each unvisited neighbour V of U
             tempDistance <- distance[U] + edge_weight(U, V)

@@ -7,9 +7,9 @@ The Basic Algorithm for Dijkstra:-
 
 	function dijkstra(G, S)
     		for each vertex V in G
-        	distance[V] <- infinite
+        		distance[V] <- infinite
        	 	previous[V] <- NULL
-        	If V != S, add V to Priority Queue Q
+        		If V != S, add V to Priority Queue Q
    		distance[S] <- 0
 	
     	while Q IS NOT EMPTY

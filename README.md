@@ -19,7 +19,7 @@ function dijkstra(G, S)
                 distance[V] <- tempDistance
                 previous[V] <- U
     return distance[], previous[]
-  ** or**
+
     Input: a graph G, a source vertex s and a destination vertex t
 	Output: a path from s to t with the minimum weight 
 	1. for 	each vertex v do
@@ -63,7 +63,7 @@ function dijkstra(G, S)
                 distance[V] <- tempDistance
                 previous[V] <- U
     return distance[], previous[]
-   ** or**
+
     Input: a graph G, a source vertex s and a destination vertex t
 	Output: a path from s to t with the maximum load 
 	1. for each vertex v do

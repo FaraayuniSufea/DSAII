@@ -24,18 +24,18 @@ The Basic Algorithm for Dijkstra:-
     Input: a graph G, a source vertex s and a destination vertex t
 	Output: a path from s to t with the minimum weight 
 	1. for 	each vertex v do
-		{ status[v]=0; wt[v]=-1; dad[v]=-1; } 
+	{ status[v]=0; wt[v]=-1; dad[v]=-1; } 
 	2. status[s]=2; wt[s]=+∞;
 	3. for each edge [s, w] do
-		{ status[w]=1; wt[w]=weight(s,w); dad[w]=s; }
+	{ status[w]=1; wt[w]=weight(s,w); dad[w]=s; }
 	4. while there are fringes do
-		v = the fringe with the min wt-value; status[v]=2;
-		for each edge[v, w] do
-			case 1. status[w]==0:
-			{ status[w]=1; wt[w]=wt[v]+weight(v, w);
-			dad[w]=v; }
-			case 2. (status[w]==1) and (wt[w]>(wt[v]+weight(v,w)): { wt[w]= wt[v]+weight(v, w);
-			dad[w]=v; }
+	v = the fringe with the min wt-value; status[v]=2;
+	for each edge[v, w] do
+	case 1. status[w]==0:
+	{ status[w]=1; wt[w]=wt[v]+weight(v, w);
+	dad[w]=v; }
+	case 2. (status[w]==1) and (wt[w]>(wt[v]+weight(v,w)): { wt[w]= wt[v]+weight(v, w);
+	dad[w]=v; }
     
 
 Dijkstra's algorithm are modified because to determine the maximum load rather than the shortest path. Based on Dijkstra’s Algorithm, the starting location, s and the destination, t can be found in O((n+m)logn) time. However, since determining the greatest load path is not the same as determining the shortest path, Dijkstra's algorithm needs to be adjusted. The issue of determining the maximum load path can then be successfully solved. The weight in Dijkstra's algorithm represents factors like time, cost, and distance. The weight in the modified Dijkstra's algorithm only represents the load capacity when it is constrained by a road.
@@ -74,5 +74,5 @@ Modified Dijkstra's Algorithm:-
 	dad[w]=v; }
 
 
-However the performance for basic dijkstra and a modified dijkstra are remains the same which it takes O((n+m)logn) time. Furthermore, both dijkstra and modified dijkstra are low complexity which is almost linear. Dijkstra algorithm are use for solving the problem of finding the shortest path, meanwhile the Modified Dijkstra algorithm are use to find the maximum load path. 
+However the performance for basic dijkstra and a modified dijkstra are remains the same which it takes O((n+m)logn) time. Additionally, the complexity of dijkstra and modified dijkstra is minimal and nearly linear. The Modified Dijkstra algorithm is used to identify the maximum load path, whereas the Dijkstra algorithm is used to solve the problem of finding the shortest path.
     

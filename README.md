@@ -1,6 +1,8 @@
 # DSAII 
 A Modified Dijkstra's Algorithm for Solving the Problem of Finding the Maximum Load Path C++ code
 
+Wei, K., Gao, Y., Zhang, W., &amp; Lin, S. (2019). A modified Dijkstra’s algorithm for solving the problem of finding the maximum load path. 2019 IEEE 2nd International Conference on Information and Computer Technologies (ICICT). https://doi.org/10.1109/infoct.2019.8711024 
+
 Djikstra applied this characteristic the other way around, for example, we overstate the distances between each vertex and the origin. After that, we go to each node and its neighbours to determine the shortest subpath there. In order to identify the next best answer, the algorithm takes a greedy approach with the expectation that the final result will be the best solution for the entire problem.
 
 The Basic Algorithm for Dijkstra:-

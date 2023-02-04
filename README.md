@@ -37,14 +37,6 @@ The Basic Algorithm for Dijkstra:-
 			case 2. (status[w]==1) and (wt[w]>(wt[v]+weight(v,w)): { wt[w]= wt[v]+weight(v, w);
 			dad[w]=v; }
     
-Performance of Dijkstra algorithm
-The Dijkstra algorithm takes O((n+m)logn) time where n is the number of nodes in graph G and m is the number of edges in graph G
-
-Advantage of Dijkstra
-Considerably low complexity, which is almost linear
-
-Disadvantage of Dijkstra
-Can not work when dealing with negative weight
 
 Dijkstra's algorithm are modified because to determine the maximum load rather than the shortest path. Based on Dijkstra’s Algorithm, the starting location, s and the destination, t can be found in O((n+m)logn) time. However, since determining the greatest load path is not the same as determining the shortest path, Dijkstra's algorithm needs to be adjusted. The issue of determining the maximum load path can then be successfully solved. The weight in Dijkstra's algorithm represents factors like time, cost, and distance. The weight in the modified Dijkstra's algorithm only represents the load capacity when it is constrained by a road.
 
@@ -81,12 +73,6 @@ Modified Dijkstra's Algorithm:-
 	case 2. (status[w]==1) and (wt[w]<min{wt[v],weight(v, w)}): { wt[w]=min{wt[v], weight(v, w)};
 	dad[w]=v; }
 
-Performance of the modified dijkstra
-The modified dijkstra takes O((n+m)logn) time where n is the number of nodes in graph G and m is the number of edges in graph G
-When to use dijkstra and modified dijkstra algorithm
 
-Dijkstra algorithm are use for solving the problem of finding the shortest path, In social networking applications, in a telephone network, and to find the locations in the map meanwhile the Modified Dijkstra algorithm are use to find the maximum load path.
-
-
-    
+However the performance for basic dijkstra and a modified dijkstra are remains the same which it takes O((n+m)logn) time. Furthermore, both dijkstra and modified dijkstra are low complexity which is almost linear. Dijkstra algorithm are use for solving the problem of finding the shortest path, meanwhile the Modified Dijkstra algorithm are use to find the maximum load path. 
     
